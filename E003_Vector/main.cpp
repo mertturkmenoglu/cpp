@@ -1,3 +1,7 @@
+/**
+ * g++ main.cpp -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main
+ */
+
 #include <vector>
 #include <iostream>
 

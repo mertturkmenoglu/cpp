@@ -3,7 +3,7 @@
  * Demonstration of swap function
  * in standard library for arrays.
  *
- * g++ swap.cpp
+ * g++ main.cpp -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main
  */
 
 #include <bits/stdc++.h>

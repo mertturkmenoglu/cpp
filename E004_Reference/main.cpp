@@ -1,7 +1,7 @@
 /**
  * Reference example
  * 
- * g++ reference.cpp
+ * g++ main.cpp -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main
  */
 
 #include <iostream>
@@ -15,7 +15,7 @@ int main()
   
   while (var < 100) {
     std::cout << "Variable: " << var << std::endl;
-    std::cout << "Referance: " << ref << std::endl;
+    std::cout << "Reference: " << ref << std::endl;
     std::cout << "******" << std::endl;
     ref += 10;
   }
