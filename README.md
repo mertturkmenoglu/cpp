@@ -14,6 +14,15 @@
     g++ -o main main.cpp
     ./main
 ```
+* You can use `afgenerator.jar` file to create auto file generation.
+* Simple process:
+  * Add an alias:
+    * `vim ~/.bashrc`
+    * Add this line: `alias gen="./afgenerator.jar"`
+    * Run this command: `source ~/.bashrc`
+  * Run the program via terminal with arguments:
+    * `gen 123 CppTest`
+* **Temporarily, it does not work**.
 ***
 # GCC Commands / Flags
 * Turn on warnings: `-Wall -Wextra`
