@@ -1,5 +1,5 @@
 /**
- * Function template example
+ * Generic quickSort implementation
  * 
  * g++ main.cpp -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main
  * valgrind --leak-check=yes -v ./main
@@ -18,7 +18,6 @@ void quickSort(T array[], int begin = 0, int end = 0);
 template <class T>
 void printArray(T array[], int begin = 0, int end = 0);
 
-// A generic function to determine maximum of two value
 template <class T>
 void quickSort(T array[], int begin, int end) {
     if (begin < end) {
