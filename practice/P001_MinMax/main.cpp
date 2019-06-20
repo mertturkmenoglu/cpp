@@ -7,12 +7,12 @@
 #include <iostream>
 
 template<class T>
-T Min(T a, T b) {
+inline const T& Min(const T& a, const T& b) {
     return (a < b)? a : b;
 }
 
 template<class T>
-T Max(T a, T b) {
+inline const T& Max(const T& a, const T& b) {
     return (a > b)? a : b;
 }
 
