@@ -24,6 +24,9 @@ public:
 int main() {
     std::unique_ptr<int> p_int = std::make_unique<int>();
 
+    // This line creates compile time error
+    //std::unique_ptr<int> p_sec = p_int;
+    
     *p_int = 5;
     std::cout << *p_int << std::endl;
     *p_int = 7;
