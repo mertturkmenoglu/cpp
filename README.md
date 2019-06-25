@@ -3,6 +3,18 @@
 # Description
 * This repository contains my C++ codes.
 * You need to install **GCC** to your system(or another compiler). Please follow the [original source].
+***
+# Project Structure
+
+```
+  |-> examples
+  |-> practice
+  |-> stl
+```
+  * `examples`: Language feature examples.
+  * `practice`: Coding practices and showing language features on algorithms.
+  * `stl`: You may find `C++ Standard Template Library` examples in this directory.
+***
 # Build
 * You need **GCC** on your system.
 * Clone the repository:  
@@ -10,7 +22,7 @@
 * After getting repository on your local environment, a simple compile process:  
 ```
     cd cpp
-    cd E001_Swap
+    cd examples/E001_Swap
     g++ -o main main.cpp
     ./main
 ```  
