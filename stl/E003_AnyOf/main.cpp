@@ -1,5 +1,5 @@
 /**
- * adjacent_find() example
+ * any_of() example
  * "g++ main.cpp -std=c++17 -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main"
  * valgrind --leak-check=yes -v ./main
  */
