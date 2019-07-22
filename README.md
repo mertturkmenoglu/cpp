@@ -10,10 +10,12 @@
   |-> examples
   |-> practice
   |-> stl
+  CMakeLists.txt
 ```
   * `examples`: Language feature examples.
   * `practice`: Coding practices and showing language features on algorithms.
   * `stl`: You may find `C++ Standard Template Library` examples in this directory.
+  * `CMakeLists.txt`: All executable links should be declared here.
 ***
 # Build
 * You need **GCC** on your system.
@@ -26,16 +28,6 @@
     g++ -o main main.cpp
     ./main
 ```  
-* You can use `afgenerator.jar` file to create auto file generation.
-* Simple process:
-  * Add an alias:
-    * `vim ~/.bashrc`
-    * Add this line: `alias gen="./afgenerator.jar"`
-    * Run this command: `source ~/.bashrc`
-  * Program needs `settings.json` in the directory. When you open it first time, it will ask you necessary parameters and create the file.
-  * Run the program via terminal with arguments:
-    * `gen 123 CppTest`: Create folder
-    * `gen -s`: Update settings
 ***
 # GCC Commands / Flags
 * Turn on warnings: `-Wall -Wextra`
