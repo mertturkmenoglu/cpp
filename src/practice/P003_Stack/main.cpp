@@ -98,7 +98,7 @@ int main() {
     // Should throw an error
     try {
         s.Pop();
-    } catch (std::exception e) {
+    } catch (const std::exception& e) {
         e.what();
         std::cerr << "Empty stack" << std::endl;
     }

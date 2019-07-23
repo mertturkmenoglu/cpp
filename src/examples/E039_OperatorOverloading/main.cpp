@@ -25,21 +25,21 @@ public:
 
     // Pre-increment, return object
     Temperature operator++() {
-        return Temperature(++m_Value);
+        return {++m_Value};
     }
 
     // Post-increment, return object
-    Temperature operator++(int) {
+    const Temperature operator++(int) {
         return Temperature(m_Value++);
     }
 
     // Pre-decrement, return object
     Temperature operator--() {
-        return Temperature(--m_Value);
+        return {--m_Value};
     }
 
     // Post-decrement, return object
-    Temperature operator--(int) {
+    const Temperature operator--(int) {
         return Temperature(m_Value--);
     }
 };

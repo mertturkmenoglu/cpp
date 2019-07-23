@@ -32,7 +32,7 @@ int main() {
     delete ptr;
 
     // Complex type
-    Example *example = new Example();
+    auto example = new Example();
     example->printHello();
     delete example;
 
@@ -43,7 +43,7 @@ int main() {
         // It should produce an exception unless your machine
         // has this amount of memory...
         array = new int[REALLY_BIG_NUMBER];
-    } catch (std::exception e) {
+    } catch (const std::exception& e) {
         std::cout << e.what() << std::endl;
     }
 

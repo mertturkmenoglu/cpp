@@ -35,9 +35,9 @@ int main() {
     printWords(tokens);
 
     // Reverse the string
-    for (std::string str : tokens) {
-        std::reverse(str.begin(), str.end());
-        reverse.push_back(str);
+    for (std::string& string : tokens) {
+        std::reverse(string.begin(), string.end());
+        reverse.push_back(string);
     }
 
     std::cout << "Reverse: " << std::endl;

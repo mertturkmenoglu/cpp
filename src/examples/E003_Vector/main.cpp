@@ -13,12 +13,12 @@ int main()
         v1.push_back(i);
 
     std::cout << "begin: ";
-    for (auto i = v1.begin(); i != v1.end(); ++i)
-        std::cout << *i << " ";
+    for (int & i : v1)
+        std::cout << i << " ";
 
     std::cout << std::endl << "cbegin: ";
-    for (auto i = v1.cbegin(); i != v1.cend(); ++i)
-        std::cout << *i << " ";
+    for (int i : v1)
+        std::cout << i << " ";
 
     std::cout << std::endl << "rbgin: ";
     for (auto ir = v1.rbegin(); ir != v1.rend(); ++ir)

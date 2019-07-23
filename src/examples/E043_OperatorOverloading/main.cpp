@@ -13,7 +13,7 @@ private:
 public:
     Temperature() : m_Value(-273.15) { }
     
-    Temperature(double value) : m_Value(value) { }
+    explicit Temperature(double value) : m_Value(value) { }
     
     friend std::ostream& operator<<(std::ostream& output, const Temperature& T) {
         output << T.m_Value;

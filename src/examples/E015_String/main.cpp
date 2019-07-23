@@ -20,7 +20,7 @@ int main( ) {
     
     std::cout << message << std::endl << userMessage << std::endl;
 
-    if (userMessage.compare(message) == 0) {
+    if (message == userMessage) {
         std::cout << "Messages are same" << std::endl;
     } else {
         std::cout << "Messages are different" << std::endl;

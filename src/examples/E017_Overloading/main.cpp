@@ -16,16 +16,16 @@ public:
 
     // Addition operator overloading
     Complex operator+(Complex other) {
-        return Complex(this->real + other.real, this->imaginary + other.imaginary);
+        return {this->real + other.real, this->imaginary + other.imaginary};
     }
 
     // Subtraction operator overloading
     Complex operator-(Complex other) {
-        return Complex(this->real - other.real, this->imaginary - other.imaginary);
+        return {this->real - other.real, this->imaginary - other.imaginary};
     }
 
     // Casting operator overloading
-    operator std::string() {
+    explicit operator std::string() {
         if (imaginary > 0) {
             return (std::to_string(real) + " +" + std::to_string(imaginary) + "i");
         } else if (imaginary < 0) {

@@ -1,3 +1,7 @@
+#include <utility>
+
+#include <utility>
+
 /**
  * Virtual function example
  * g++ main.cpp -Wall -Wextra -pedantic -g -o main
@@ -9,7 +13,7 @@
 // Not using virtual function
 class Entity {
 public:
-    std::string getEntityInfo() {
+    virtual std::string getEntityInfo() {
         return std::string("Entity object");
     }
 };
@@ -19,8 +23,8 @@ class Player : public Entity {
 private:
     std::string info;
 public:
-    Player(const std::string& info) : info(info) { }
-    std::string getEntityInfo() {
+    explicit Player(std::string  info) : info(std::move(info)) { }
+    std::string getEntityInfo() override {
         return info;
     }
 };
@@ -40,17 +44,17 @@ class Squirrel : public Animal {
 private:
     std::string name;
 public:
-    Squirrel(const std::string& name) : name(name) { }
+    explicit Squirrel(std::string name) : name(std::move(name)) { }
     std::string getAnimalName() override {
         return name;
     }
 };
 
 int main() {
-    Entity *e = new Entity();
+    auto *e = new Entity();
     Player *p = new Player(std::string("Ready Player One"));
 
-    Animal *a = new Animal();
+    auto *a = new Animal();
     Squirrel *alf = new Squirrel(std::string("Alf"));
 
     std::cout << e->getEntityInfo() << std::endl;

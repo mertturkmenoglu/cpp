@@ -1,3 +1,5 @@
+#include <utility>
+
 /**
  * friend function example
  * 
@@ -14,14 +16,14 @@ private:
     int age;
 public:
     // Constructor
-    Person(std::string name, int age): name(name), age(age) { }
+    Person(std::string name, int age): name(std::move(name)), age(age) { }
     
     //friend function declaration
-    friend void printInfo(Person);
+    friend void printInfo(const Person&);
 };
 
 // Friend function definition
-void printInfo(Person p) {
+void printInfo(const Person& p) {
     std::cout << "Name: " << p.name << " Age: " << p.age << std::endl;
 }
 

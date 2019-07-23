@@ -17,7 +17,7 @@ public:
         std::cout << "A person object deleted" << std::endl;
     }
 
-    void print() {
+    static void print() {
         std::cout << "I am at Person.print() method" << std::endl;
     }
 };
@@ -28,8 +28,8 @@ int main() {
     std::cout << __LINE__ << std::endl;
     // Scope starts
     {
-        Person* person = new Person();
-        person->print();
+        auto* person = new Person();
+        Person::print();
 
         delete person;
     }

@@ -20,7 +20,7 @@ int main() {
         tokens.push_back(temp);
     }
 
-    for(std::string str : tokens) {
+    for(const std::string& str : tokens) {
         std::cout << str << std::endl;
     }
 

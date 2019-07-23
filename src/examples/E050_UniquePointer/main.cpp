@@ -1,3 +1,5 @@
+#include <utility>
+
 /**
  * Unique pointer example
  * "g++ main.cpp -std=c++17 -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main"
@@ -11,14 +13,14 @@ class Person {
 private:
  std::string name;
 public:
-    Person(const std::string& name) : name(name) {
+    explicit Person(std::string  name) : name(std::move(name)) {
       std::cout << "Person created" << std::endl;
     }
 
     ~Person() { std::cout << "Person deleted" << std::endl; }
 
     inline const std::string& GetName() const { return name; }
-    inline void SetName(const std::string& name) { this->name = name; }
+    inline void SetName(const std::string& _name) { this->name = _name; }
 };
 
 int main() {

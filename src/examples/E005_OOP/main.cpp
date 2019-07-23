@@ -1,5 +1,5 @@
 /**
- * Objet Oriented Programming Example
+ * Object Oriented Programming Example
  * Basic class definition and instance creating
  * 
  * g++ main.cpp -g -o main
@@ -19,16 +19,16 @@ public:
         return name;
     }
 
-    void setName(const std::string &name) {
-        Student::name = name;
+    void setName(const std::string &_name) {
+        Student::name = _name;
     }
 
     int getId() const {
         return id;
     }
 
-    void setId(int id) {
-        Student::id = id;
+    void setId(int _id) {
+        Student::id = _id;
     }
 };
 

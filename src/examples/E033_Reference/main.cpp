@@ -21,7 +21,7 @@ class JustClass {
 private:
     std::string m_string;
 public:
-    JustClass(std::string& string) : m_string(string) { }
+    explicit JustClass(std::string& string) : m_string(string) { }
     
     std::string GetString() const {
         return m_string;
@@ -48,7 +48,7 @@ int main() {
     
     JustClass jc(my_string);
     std::cout << "After object creation: " << my_string << std::endl;
-    std::cout << "Getter metod call: " << jc.GetString() << std::endl;
+    std::cout << "Getter method call: " << jc.GetString() << std::endl;
 
     return 0;
 }

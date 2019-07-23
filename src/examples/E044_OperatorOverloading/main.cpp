@@ -13,7 +13,7 @@ private:
 public:
     Temperature() : m_Value(-273) { }
 
-    Temperature(int value) : m_Value(value) { }
+    explicit Temperature(int value) : m_Value(value) { }
 
     int GetValue() const {
         return m_Value;

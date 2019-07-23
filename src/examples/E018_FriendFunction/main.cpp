@@ -18,8 +18,8 @@ class SecondClass {
 private:
     int number;
 public:
-    SecondClass() { }
-    SecondClass(int number) {
+    SecondClass() = default;
+    explicit SecondClass(int number) {
         this->number = number;
     }
 

@@ -11,7 +11,7 @@ class Temperature
 private:
     int m_Value;
 public:
-    Temperature(int value) : m_Value(value) { }
+    explicit Temperature(int value) : m_Value(value) { }
 
     int GetValue() const {
         return m_Value;

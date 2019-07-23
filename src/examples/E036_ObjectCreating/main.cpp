@@ -1,3 +1,5 @@
+#include <utility>
+
 /**
  * Object creating example
  * "g++ main.cpp -std=c++17 -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main"
@@ -12,7 +14,7 @@ private:
     std::string m_Name;
 public:
     Person() : m_Name("No name") { }
-    Person(const std::string& name) : m_Name(name) { }
+    explicit Person(std::string  name) : m_Name(std::move(name)) { }
     const std::string& GetName() const { return m_Name; }
 };
 
@@ -28,7 +30,7 @@ int main() {
     std::cout << "Name: " << p3.GetName() << std::endl;
 
     // Creates on heap
-    Person* p4 = new Person();
+    auto* p4 = new Person();
     Person* p5 = new Person("Emily");
     
     std::cout << "Name: " << p4->GetName() << std::endl;

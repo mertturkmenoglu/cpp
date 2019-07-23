@@ -1,3 +1,5 @@
+#include <utility>
+
 /**
  * Implicit type conversion example
  * g++ main.cpp -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main
@@ -12,8 +14,8 @@ private:
     std::string m_Name;
     int m_Age;
 public:
-    Person(const std::string& name)
-        : m_Name(name), m_Age(-1) { }
+    Person(std::string  name)
+        : m_Name(std::move(name)), m_Age(-1) { }
 
     Person(int age)
         : m_Name(""), m_Age(age) { }

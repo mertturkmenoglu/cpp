@@ -23,7 +23,7 @@ public:
 class Operations {
 public:
     static Complex add(Complex first, Complex second) {
-        return Complex(first.real + second.real, first.imaginary + second.imaginary);
+        return { first.real + second.real, first.imaginary + second.imaginary };
     }
 
     static int add(int first, int second) {
@@ -42,12 +42,11 @@ int main() {
 
     std::cout << c1.toString() << std::endl << c2.toString() << std::endl;
 
-    Operations op;
-    Complex c3 = op.add(c1, c2);
+    Complex c3 = Operations::add(c1, c2);
     std::cout << c3.toString() << std::endl;
 
-    std::cout << op.add(1, 2) << std::endl; 
-    std::cout << op.add(1, 2, 3) << std::endl;
+    std::cout << Operations::add(1, 2) << std::endl;
+    std::cout << Operations::add(1, 2, 3) << std::endl;
 
     return 0;
 }

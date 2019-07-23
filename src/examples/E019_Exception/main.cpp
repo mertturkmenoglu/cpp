@@ -10,13 +10,13 @@
 
 class SpecialException : public std::exception {
 public:
-    virtual const char *what() const throw() {
-        return "Special Exception Occured";
+    const char *what() const noexcept override {
+        return "Special Exception Occurred";
     }
 };
 
 // Return area of a square
-double area(double sideLength) {
+int area(int sideLength) {
     if (sideLength <= 0) {
         throw "Side length must be positive";
     }
@@ -24,7 +24,7 @@ double area(double sideLength) {
     return (sideLength * sideLength);
 }
 
-double specialArea(double sideLength) {
+int specialArea(int sideLength) {
     if (sideLength <= 0) {
         throw SpecialException();
     }
@@ -33,8 +33,8 @@ double specialArea(double sideLength) {
 }
 
 int main () {
-    double sides[] = {5, 7, 2, 0, 4};
-    double a;
+    int sides[] = {5, 7, 2, 0, 4};
+    int a;
 
     // Basic throw
     try {

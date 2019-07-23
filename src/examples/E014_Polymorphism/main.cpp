@@ -9,14 +9,14 @@
 
 class Animal {
 public:
-    void sound() {
+    virtual void sound() {
         std::cout << "Animal class sound function invoked" << std::endl;
     }
 };
 
 class Squirrel: public Animal {
 public:
-    void sound() {
+    void sound() override {
         std::cout << "Squirrel class sound function invoked" << std::endl;
     }
 };
@@ -30,20 +30,20 @@ public:
 
 class Rectangle: public Shape {
 public:
-    void draw() {
+    void draw() override {
        std::cout << "Rectangle class draw function" << std::endl;
     }
 };
 
 class Triangle: public Shape {
 public:
-    void draw() {
+    void draw() override {
         std::cout << "Triangle class draw function" << std::endl;
     }
 };
 
 // Driver code
-int main(void) {
+int main() {
     Squirrel alf = Squirrel();
     alf.sound();
 

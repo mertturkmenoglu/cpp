@@ -9,10 +9,10 @@
 #include <vector>
 
 int main() {
-    int newints[] = {1, 5, 1, 20, 20, 50, 0, 0, 3};
-    std::vector<int> newVector(newints, newints + 9);
+    int numbers[] = {1, 5, 1, 20, 20, 50, 0, 0, 3};
+    std::vector<int> newVector(numbers, numbers + 9);
     
-    // Print elemets
+    // Print elements
     std::for_each(newVector.begin(), newVector.end(), [](int it) {
         std::cout << it << '\t';
     });

@@ -72,7 +72,7 @@ void merge(T array[], int start, int mid, int end)
 }
 
 int main() {
-    srand(time(NULL));
+    srand(time(nullptr));
 
     int arr_int[10];
     float arr_float[10];

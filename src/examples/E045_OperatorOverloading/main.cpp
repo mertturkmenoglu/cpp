@@ -12,7 +12,7 @@ private:
     T* array;
     int m_Size;
 public:
-    Array(int size) {
+    explicit Array(int size) {
         m_Size = size;
         array = new T[size];
     }

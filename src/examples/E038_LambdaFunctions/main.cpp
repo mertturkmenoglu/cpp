@@ -16,7 +16,7 @@ void printFloats(const std::vector<float>& nums, void (*func)(float))
 }
 
 void printWithLambda(const std::vector<float>& nums, 
-    std::function<void(float)> func)
+    const std::function<void(float)>& func)
 {
     for (auto num : nums) {
         func(num);

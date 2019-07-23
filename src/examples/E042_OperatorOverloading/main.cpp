@@ -11,7 +11,7 @@ class Player
 private:
     bool m_Alive;
 public:
-    Player(bool alive) : m_Alive(alive) { }
+    explicit Player(bool alive) : m_Alive(alive) { }
 
     bool GetStatus() const {
         return m_Alive;

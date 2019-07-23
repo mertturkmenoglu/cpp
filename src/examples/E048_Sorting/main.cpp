@@ -9,7 +9,7 @@
 #include <algorithm>
 #include <functional>
 
-void printAll(std::vector<int> vec) {
+void printAll(const std::vector<int>& vec) {
     for (auto element : vec) {
         std::cout << element << "\t";
     }
@@ -31,7 +31,7 @@ int main() {
 
     vec = {3, 2, 1, 5, 2, 2, 4, 6};
     printAll(vec);
-    std::sort(vec.begin(), vec.end(), std::greater<int>());
+    std::sort(vec.begin(), vec.end(), std::greater<>());
     printAll(vec);
 
 

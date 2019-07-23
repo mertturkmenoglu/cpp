@@ -1,5 +1,5 @@
 /**
- * Inheritance ambiquity resolution example
+ * Inheritance ambiguity resolution example
  * 
  * g++ main.cpp -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main
  * valgrind --leak-check=yes -v ./main
