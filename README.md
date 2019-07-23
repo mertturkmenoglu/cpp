@@ -12,9 +12,10 @@
 # Project Structure
 
 ```
-  |-> examples
-  |-> practice
-  |-> stl
+  |-> src
+    |-> examples
+    |-> practice
+    |-> stl
   CMakeLists.txt
 ```
   * `examples`: Language feature examples.
