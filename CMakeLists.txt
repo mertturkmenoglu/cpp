@@ -55,6 +55,7 @@ add_executable(E047_Time src/examples/E047_Time/main.cpp)
 add_executable(E048_Sorting src/examples/E048_Sorting/main.cpp)
 add_executable(E049_SmartPointers src/examples/E049_SmartPointers/main.cpp)
 add_executable(E050_UniquePointer src/examples/E050_UniquePointer/main.cpp)
+add_executable(E051_Templates src/examples/E051_Templates/main.cpp)
 
 
 
