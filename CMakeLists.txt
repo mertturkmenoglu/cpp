@@ -86,3 +86,4 @@ add_executable(E016_Search src/stl/algorithm/NonModifying/E016_Search/main.cpp)
 add_executable(E017_SearchN src/stl/algorithm/NonModifying/E017_SearchN/main.cpp)
 
 add_executable(E001_Copy src/stl/algorithm/Modifying/E001_Copy/main.cpp)
+add_executable(E002_CopyN src/stl/algorithm/Modifying/E002_CopyN/main.cpp)
