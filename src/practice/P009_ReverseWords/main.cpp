@@ -10,7 +10,7 @@
 #include <algorithm>        // For reverse
 
 void printWords(std::vector<std::string>& words) {
-    for (std::string str : words) {
+    for (const std::string& str : words) {
         std::cout << str << "\t";
     }
     std::cout << std::endl;

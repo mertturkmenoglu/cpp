@@ -1,3 +1,5 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "MemberFunctionCanBeStatic"
 /**
  * Single Inheritance Example
  * 
@@ -82,4 +84,5 @@ int main() {
     designer.makeRaise(50);
     std::cout << designer.salary << std::endl;
     std::cout << designer.getAge() << std::endl;
-}  
+}
+#pragma clang diagnostic pop

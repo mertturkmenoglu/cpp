@@ -34,7 +34,7 @@ public:
 };
 
 // Driver code
-int main(void) {
+int main() {
     Address address = Address("Ataturk Street", 19, "Istanbul");
     Student student = Student(&address, 1923, "Kemal");
     student.printInfo();

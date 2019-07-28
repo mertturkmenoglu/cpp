@@ -21,7 +21,7 @@ public:
         : m_Name(""), m_Age(age) { }
 };
 
-void printPerson(Person p) {
+void printPerson(const Person& p) {
     std::cout << "printPerson()" << std::endl;
 }
 

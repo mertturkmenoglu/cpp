@@ -10,7 +10,8 @@
 
 int main() {
     std::vector<int> numbers = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-    std::vector<int> evenNumbers(std::count_if(numbers.begin(), numbers.end(), [](int n){ return n % 2 == 0;}));
+    std::vector<int> evenNumbers(
+            static_cast<unsigned long>(std::count_if(numbers.begin(), numbers.end(), [](int n) { return n % 2 == 0; })));
 
     std::copy_if(numbers.begin(), numbers.end(), evenNumbers.begin(), [](int n) { return n % 2 == 0; });
 

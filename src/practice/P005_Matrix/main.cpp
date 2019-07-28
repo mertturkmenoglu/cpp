@@ -19,7 +19,7 @@ int main() {
     int x = 0;
     int counter = 0;
 
-    srand(time(NULL));
+    srand(time(nullptr));
 
     bool switches[terminalWidth] = {false};
 

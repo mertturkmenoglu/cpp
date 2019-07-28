@@ -15,7 +15,7 @@ private:
     K key;
     V value;
 public:
-    Storage(K key, V value) : key(key), value(value) { }
+    Storage(K key, V value) : key(std::move(key)), value(value) { }
 
     void displayStorage() {
         std::cout << "Key: " << this->key << "    Value: " << this->value << std::endl;

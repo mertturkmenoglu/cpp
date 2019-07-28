@@ -31,7 +31,7 @@ int main() {
 
     // Creates on heap
     auto* p4 = new Person();
-    Person* p5 = new Person("Emily");
+    auto* p5 = new Person("Emily");
     
     std::cout << "Name: " << p4->GetName() << std::endl;
     std::cout << "Name: " << (*p5).GetName() << std::endl;

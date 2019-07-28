@@ -12,10 +12,10 @@
 
 int main() {
     std::srand(std::time(nullptr));
-    int n = std::rand() % 10;
+    unsigned long n = std::rand() % 10;
     std::vector<int> numbers(n);
 
-    for (int i = 0; i < n; i++) {
+    for (unsigned long i = 0; i < n; i++) {
         numbers.push_back(std::rand() % n);
     }
 

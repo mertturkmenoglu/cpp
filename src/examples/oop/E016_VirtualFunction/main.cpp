@@ -1,6 +1,5 @@
 #include <utility>
 
-#include <utility>
 
 /**
  * Virtual function example
@@ -52,10 +51,10 @@ public:
 
 int main() {
     auto *e = new Entity();
-    Player *p = new Player(std::string("Ready Player One"));
+    auto *p = new Player(std::string("Ready Player One"));
 
     auto *a = new Animal();
-    Squirrel *alf = new Squirrel(std::string("Alf"));
+    auto *alf = new Squirrel(std::string("Alf"));
 
     std::cout << e->getEntityInfo() << std::endl;
     std::cout << p->getEntityInfo() << std::endl;

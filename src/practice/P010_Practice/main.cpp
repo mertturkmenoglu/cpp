@@ -17,7 +17,7 @@ int main() {
 
     std::for_each(vec.begin(), vec.end(), [&max_prime](const int& num){
         if (num > max_prime) {
-            std::list<int> l(num - 1);
+            std::list<int> l(static_cast<unsigned long>(num - 1));
             std::iota(l.begin(), l.end(), 2);
 
             bool result = std::any_of(l.begin(), l.end(), [num](int i) {

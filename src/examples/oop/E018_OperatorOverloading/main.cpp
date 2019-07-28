@@ -29,7 +29,7 @@ public:
     }
 
     // Post-increment, return object
-    const Temperature operator++(int) {
+    Temperature operator++(int) {
         return Temperature(m_Value++);
     }
 
@@ -39,7 +39,7 @@ public:
     }
 
     // Post-decrement, return object
-    const Temperature operator--(int) {
+    Temperature operator--(int) {
         return Temperature(m_Value--);
     }
 };

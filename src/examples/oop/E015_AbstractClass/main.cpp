@@ -13,7 +13,7 @@ public:
 
 class Triangle : public Shape {
 public:
-    void drawShape() {
+    void drawShape() override {
         std::cout << "Drawing Triangle" << std::endl;
     }
 };

@@ -1,3 +1,5 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "MemberFunctionCanBeStatic"
 /**
  * Multi level inheritance example
  * 
@@ -40,3 +42,4 @@ int main() {
 
     return 0;
 }
+#pragma clang diagnostic pop

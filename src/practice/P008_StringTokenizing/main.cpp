@@ -6,7 +6,6 @@
 
 #include <iostream>
 #include <vector>
-#include <sstream>
 
 int main() {
     std::string line = "String contains multiple words";

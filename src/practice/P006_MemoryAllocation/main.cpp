@@ -1,3 +1,5 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "MemberFunctionCanBeStatic"
 /**
  * Memory Allocation example
  * g++ main.cpp -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main
@@ -56,3 +58,5 @@ int main() {
     return 0;
 }
 
+
+#pragma clang diagnostic pop
