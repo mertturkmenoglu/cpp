@@ -4,58 +4,68 @@ project(cpp)
 set(CMAKE_CXX_STANDARD 14)
 
 ### Language Examples ###
-add_executable(E001_Swap src/examples/E001_Swap/main.cpp)
-add_executable(E002_String src/examples/E002_String/stringConcat.cpp)
-add_executable(E002_String_2 src/examples/E002_String/stringSort.cpp)
-add_executable(E003_Vector src/examples/E003_Vector/main.cpp)
-add_executable(E004_Reference src/examples/E004_Reference/main.cpp)
-add_executable(E005_OOP src/examples/E005_OOP/main.cpp)
-add_executable(E006_FriendFunction src/examples/E006_FriendFunction/main.cpp)
-add_executable(E007_Inheritance src/examples/E007_Inheritance/main.cpp)
-add_executable(E008_Inheritance src/examples/E008_Inheritance/main.cpp)
-add_executable(E009_FileIO src/examples/E009_FileIO/main.cpp)
-add_executable(E010_FileIO src/examples/E010_FileIO/main.cpp)
-add_executable(E011_Inheritance src/examples/E011_Inheritance/main.cpp)
-add_executable(E012_Inheritance src/examples/E012_Inheritance/main.cpp)
-add_executable(E013_Aggregation src/examples/E013_Aggregation/main.cpp)
-add_executable(E014_Polymorphism src/examples/E014_Polymorphism/main.cpp)
-add_executable(E015_String src/examples/E015_String/main.cpp)
-add_executable(E016_Overloading src/examples/E016_Overloading/main.cpp)
-add_executable(E017_Overloading src/examples/E017_Overloading/main.cpp)
-add_executable(E018_FriendFunction src/examples/E018_FriendFunction/main.cpp)
-add_executable(E019_Exception src/examples/E019_Exception/main.cpp)
-add_executable(E020_Template src/examples/E020_Template/main.cpp)
-add_executable(E021_QuickSort src/examples/E021_QuickSort/main.cpp)
-add_executable(E022_Template src/examples/E022_Template/main.cpp)
-add_executable(E023_Namespace src/examples/E023_Namespace/main.cpp)
-add_executable(E024_AbstractClass src/examples/E024_AbstractClass/main.cpp)
-add_executable(E025_Matrix src/examples/E025_Matrix/main.cpp)
-add_executable(E026_VirtualFunction src/examples/E026_VirtualFunction/main.cpp)
-add_executable(E027_MemoryAllocation src/examples/E027_MemoryAllocation/main.cpp)
-add_executable(E028_ArraySize src/examples/E028_ArraySize/main.cpp)
-add_executable(E029_StringTokenizing src/examples/E029_StringTokenizing/main.cpp)
-add_executable(E030_ReverseWords src/examples/E030_ReverseWords/main.cpp)
-add_executable(E031_Practice src/examples/E031_Practice/main.cpp)
-add_executable(E032_Const src/examples/E032_Const/main.cpp)
-add_executable(E033_Reference src/examples/E033_Reference/main.cpp)
-add_executable(E034_SmartPointers src/examples/E034_SmartPointers/main.cpp)
-add_executable(E035_ImplicitConversion src/examples/E035_ImplicitConversion/main.cpp)
-add_executable(E036_ObjectCreating src/examples/E036_ObjectCreating/main.cpp)
-add_executable(E037_FunctionPointers src/examples/E037_FunctionPointers/main.cpp)
-add_executable(E038_LambdaFunctions src/examples/E038_LambdaFunctions/main.cpp)
-add_executable(E039_OperatorOverloading src/examples/E039_OperatorOverloading/main.cpp)
-add_executable(E040_OperatorOverloading src/examples/E040_OperatorOverloading/main.cpp)
-add_executable(E041_OperatorOverloading src/examples/E041_OperatorOverloading/main.cpp)
-add_executable(E042_OperatorOverloading src/examples/E042_OperatorOverloading/main.cpp)
-add_executable(E043_OperatorOverloading src/examples/E043_OperatorOverloading/main.cpp)
-add_executable(E044_OperatorOverloading src/examples/E044_OperatorOverloading/main.cpp)
-add_executable(E045_OperatorOverloading src/examples/E045_OperatorOverloading/main.cpp)
-add_executable(E046_Threads src/examples/E046_Threads/main.cpp)
-add_executable(E047_Time src/examples/E047_Time/main.cpp)
-add_executable(E048_Sorting src/examples/E048_Sorting/main.cpp)
-add_executable(E049_SmartPointers src/examples/E049_SmartPointers/main.cpp)
-add_executable(E050_UniquePointer src/examples/E050_UniquePointer/main.cpp)
-add_executable(E051_Templates src/examples/E051_Templates/main.cpp)
+### Advanced Examples ###
+add_executable(E001_Exception src/examples/advanced/E001_Exception/main.cpp)
+add_executable(E002_ImplicitConversion src/examples/advanced/E002_ImplicitConversion/main.cpp)
+add_executable(E003_LambdaFunctions src/examples/advanced/E003_LambdaFunctions/main.cpp)
+add_executable(E004_Threads src/examples/advanced/E004_Threads/main.cpp)
+add_executable(E005_Time src/examples/advanced/E005_Time/main.cpp)
+add_executable(E006_Sorting src/examples/advanced/E006_Sorting/main.cpp)
+
+
+
+### File IO Examples ###
+add_executable(E001_FileIO src/examples/fileIO/E001_FileIO/main.cpp)
+add_executable(E002_FileIO src/examples/fileIO/E002_FileIO/main.cpp)
+
+
+
+### OOP examples ###
+add_executable(E001_OOP src/examples/oop/E001_OOP/main.cpp)
+add_executable(E002_FriendFunction src/examples/oop/E002_FriendFunction/main.cpp)
+add_executable(E003_Inheritance src/examples/oop/E003_Inheritance/main.cpp)
+add_executable(E004_Inheritance src/examples/oop/E004_Inheritance/main.cpp)
+add_executable(E005_Inheritance src/examples/oop/E005_Inheritance/main.cpp)
+add_executable(E006_Inheritance src/examples/oop/E006_Inheritance/main.cpp)
+add_executable(E007_Aggregation src/examples/oop/E007_Aggregation/main.cpp)
+add_executable(E008_Polymorphism src/examples/oop/E008_Polymorphism/main.cpp)
+add_executable(E009_Overloading src/examples/oop/E009_Overloading/main.cpp)
+add_executable(E010_Overloading src/examples/oop/E010_Overloading/main.cpp)
+add_executable(E011_FriendFunction src/examples/oop/E011_FriendFunction/main.cpp)
+add_executable(E012_Template src/examples/oop/E012_Template/main.cpp)
+add_executable(E013_Template src/examples/oop/E013_Template/main.cpp)
+add_executable(E014_Namespace src/examples/oop/E014_Namespace/main.cpp)
+add_executable(E015_AbstractClass src/examples/oop/E015_AbstractClass/main.cpp)
+add_executable(E016_VirtualFunction src/examples/oop/E016_VirtualFunction/main.cpp)
+add_executable(E017_ObjectCreating src/examples/oop/E017_ObjectCreating/main.cpp)
+add_executable(E018_OperatorOverloading src/examples/oop/E018_OperatorOverloading/main.cpp)
+add_executable(E019_OperatorOverloading src/examples/oop/E019_OperatorOverloading/main.cpp)
+add_executable(E020_OperatorOverloading src/examples/oop/E020_OperatorOverloading/main.cpp)
+add_executable(E021_OperatorOverloading src/examples/oop/E021_OperatorOverloading/main.cpp)
+add_executable(E022_OperatorOverloading src/examples/oop/E022_OperatorOverloading/main.cpp)
+add_executable(E023_OperatorOverloading src/examples/oop/E023_OperatorOverloading/main.cpp)
+add_executable(E024_OperatorOverloading src/examples/oop/E024_OperatorOverloading/main.cpp)
+add_executable(E025_Templates src/examples/oop/E025_Templates/main.cpp)
+
+
+
+### Other Examples ###
+add_executable(E001_Swap src/examples/other/E001_Swap/main.cpp)
+add_executable(E002_String src/examples/other/E002_String/stringConcat.cpp)
+add_executable(E002_String_2 src/examples/other/E002_String/stringSort.cpp)
+add_executable(E003_Vector src/examples/other/E003_Vector/main.cpp)
+add_executable(E004_String src/examples/other/E004_String/main.cpp)
+add_executable(E005_Const src/examples/other/E005_Const/main.cpp)
+
+
+
+### Pointer & Reference Examples ###
+add_executable(E001_Reference src/examples/pointers/E001_Reference/main.cpp)
+add_executable(E033_Reference src/examples/pointers/E002_Reference/main.cpp)
+add_executable(E003_SmartPointers src/examples/pointers/E003_SmartPointers/main.cpp)
+add_executable(E004_FunctionPointers src/examples/pointers/E004_FunctionPointers/main.cpp)
+add_executable(E005_SmartPointers src/examples/pointers/E005_SmartPointers/main.cpp)
+add_executable(E006_UniquePointer src/examples/pointers/E006_UniquePointer/main.cpp)
 
 
 
@@ -63,10 +73,18 @@ add_executable(E051_Templates src/examples/E051_Templates/main.cpp)
 add_executable(P001_MinMax src/practice/P001_MinMax/main.cpp)
 add_executable(P002_MergeSort src/practice/P002_MergeSort/main.cpp)
 add_executable(P003_Stack src/practice/P003_Stack/main.cpp)
+add_executable(P004_QuickSort src/practice/P004_QuickSort/main.cpp)
+add_executable(P005_Matrix src/practice/P005_Matrix/main.cpp)
+add_executable(P006_MemoryAllocation src/practice/P006_MemoryAllocation/main.cpp)
+add_executable(P007_ArraySize src/practice/P007_ArraySize/main.cpp)
+add_executable(P008_StringTokenizing src/practice/P008_StringTokenizing/main.cpp)
+add_executable(P009_ReverseWords src/practice/P009_ReverseWords/main.cpp)
+add_executable(P010_Practice src/practice/P010_Practice/main.cpp)
 
 
 
 ### STL Examples ###
+### Non-Modifying Algorithm Examples ###
 add_executable(E001_AllOf src/stl/algorithm/NonModifying/E001_AllOf/main.cpp)
 add_executable(E002_AdjacentFind src/stl/algorithm/NonModifying/E002_AdjacentFind/main.cpp)
 add_executable(E003_AnyOf src/stl/algorithm/NonModifying/E003_AnyOf/main.cpp)
@@ -85,6 +103,9 @@ add_executable(E015_IsPermutation src/stl/algorithm/NonModifying/E015_IsPermutat
 add_executable(E016_Search src/stl/algorithm/NonModifying/E016_Search/main.cpp)
 add_executable(E017_SearchN src/stl/algorithm/NonModifying/E017_SearchN/main.cpp)
 
+
+
+### Modifying Algorithm Examples ###
 add_executable(E001_Copy src/stl/algorithm/Modifying/E001_Copy/main.cpp)
 add_executable(E002_CopyN src/stl/algorithm/Modifying/E002_CopyN/main.cpp)
 add_executable(E003_CopyIf src/stl/algorithm/Modifying/E003_CopyIf/main.cpp)
