@@ -14,7 +14,7 @@ int main() {
     std::mt19937 mt(rd());
     std::uniform_int_distribution<int> random(0, 10);
 
-    int n = random(mt);
+    auto n = static_cast<unsigned long>(random(mt));
     std::vector<int> numbers(n);
 
     for (unsigned long i = 0; i < n; i++) {
