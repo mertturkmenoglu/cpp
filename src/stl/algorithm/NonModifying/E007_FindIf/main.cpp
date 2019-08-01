@@ -4,19 +4,21 @@
  * valgrind --leak-check=yes -v ./main
  */
 
-#include <iostream>
 #include <algorithm>
+#include <iostream>
+#include <random>
 #include <vector>
-#include <cstdlib>
-#include <ctime>
 
 int main() {
-    std::srand(std::time(nullptr));
-    unsigned long n = std::rand() % 10;
+    std::random_device rd;
+    std::mt19937 mt(rd());
+    std::uniform_int_distribution<int> random(0, 10);
+
+    int n = random(mt);
     std::vector<int> numbers(n);
 
     for (unsigned long i = 0; i < n; i++) {
-        numbers.push_back(std::rand() % n);
+        numbers.push_back(random(mt));
     }
 
     int index = 0;

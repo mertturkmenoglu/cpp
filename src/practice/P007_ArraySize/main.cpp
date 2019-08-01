@@ -5,12 +5,8 @@
  */
 
 #include <iostream>
-#include <ctime>
-#include <cstdlib>
 
 int main() {
-    srand(time(nullptr));
-
     int first[10];
     int second[20];
 

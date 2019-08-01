@@ -4,12 +4,11 @@
  * valgrind --leak-check=yes -v ./main
  */
 
+#include<chrono>
 #include<iostream>
+#include <random>
 #include<string>
 #include<thread>
-#include<cstdlib>
-#include<ctime>
-#include<chrono>
 
 int main() {
     const int terminalWidth = 80;
@@ -19,21 +18,24 @@ int main() {
     int x = 0;
     int counter = 0;
 
-    srand(time(nullptr));
-
     bool switches[terminalWidth] = {false};
 
     const std::string charSet = " 1234567890qwertyuiopasdfghjklzxcvbnm,./';[]!@#$%^&*()-=_+";
-    const int len = charSet.size();
+    const int len = static_cast<int>(charSet.size());
+
+    std::random_device rd;
+    std::mt19937 mt(rd());
+    std::uniform_int_distribution<int> random(0, len);
+    std::uniform_int_distribution<int> random_terminal_width(0, terminalWidth);
 
     while (counter++ < 10000) {
         for (int i = 0; i < terminalWidth; i += 3) {
-            char output = switches[i] ? charSet[rand() % len] : charSet.at(0);
+            char output = switches[i] ? charSet[random(mt)] : charSet.at(0);
             std::cout << output << " ";
         } 
 
         for (int i = 0; i != flipsPerLine; ++i) {
-            x = rand() % terminalWidth;
+            x = random_terminal_width(mt);
             switches[x] = !switches[x];
         }
 

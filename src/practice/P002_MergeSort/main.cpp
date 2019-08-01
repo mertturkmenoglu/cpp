@@ -7,9 +7,8 @@
 #include <iostream>
 #include <algorithm>
 #include <iterator>
-#include <ctime>
-#include <cstdlib>
 #include <iomanip>
+#include <random>
 
 template<class T>
 void mergeSort(T array[], int start, int end);
@@ -72,15 +71,18 @@ void merge(T array[], int start, int mid, int end)
 }
 
 int main() {
-    srand(time(nullptr));
+    std::random_device rd;
+    std::mt19937 mt(rd());
+    std::uniform_int_distribution<int> random_int(0, RAND_MAX);
+    std::uniform_real_distribution<double> random_double(0, RAND_MAX);
 
     int arr_int[10];
     float arr_float[10];
 
     for (int i = 0; i < 10; i++) {
-        arr_float[i] = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+        arr_float[i] = static_cast<float>(random_double(mt) / static_cast<double>(RAND_MAX));
 
-        arr_int[i] = rand() % 10;
+        arr_int[i] = random_int(mt) % 10;
     }
 
     std::for_each(std::begin(arr_int), std::end(arr_int), [](int num){
