@@ -7,7 +7,6 @@
 
 #include <iostream>
 #include <string>
-#include <cmath>
 
 template <class T>
 int partition(T array[], int begin, int end);

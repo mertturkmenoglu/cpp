@@ -17,7 +17,6 @@ inline const T& Max(const T& a, const T& b) {
 }
 
 int main() {
-
     int max1 = Max(3, 1);
     double max2 = Max(2.3, 5.1);
 

@@ -6,12 +6,7 @@
 
 #include <iostream>
 #include <algorithm>
-#include <iterator>
-#include <ctime>
-#include <cstdlib>
 #include <iomanip>
-
-#include <iostream>
 #include <vector>
 
 
@@ -49,7 +44,7 @@ public:
         return elements.back();
     }
 
-    int GetCapacity() const {
+    unsigned long GetCapacity() const {
         return elements.capacity();
     }
 
@@ -68,6 +63,9 @@ int main() {
     for (int i = 0; i < 10; i++) {
         s.Push(i);
     }
+
+    std::cout << "Capacity: " << s.GetCapacity() << std::endl;
+    std::cout << "Peek: " << s.Peek() << std::endl;
 
     std::for_each(s.GetElements().begin(),s.GetElements().end(), [](int num){
         std::cout << num << "\t";

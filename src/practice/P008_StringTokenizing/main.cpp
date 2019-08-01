@@ -1,4 +1,4 @@
-/**
+/**#include <functional>
  * String tokenizing example
  * g++ main.cpp -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main
  * valgrind --leak-check=yes -v ./main
@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include <vector>
+#include <sstream>
 
 int main() {
     std::string line = "String contains multiple words";

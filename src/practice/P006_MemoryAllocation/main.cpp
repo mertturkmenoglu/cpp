@@ -1,5 +1,3 @@
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "MemberFunctionCanBeStatic"
 /**
  * Memory Allocation example
  * g++ main.cpp -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main
@@ -20,7 +18,7 @@ public:
         std::cout << "An Example Object destroyed" << std::endl;
     }
 
-    void printHello() {
+    static void printHello() {
         std::cout << "Hello" << std::endl;
     }
 };
@@ -35,7 +33,7 @@ int main() {
 
     // Complex type
     auto example = new Example();
-    example->printHello();
+    Example::printHello();
     delete example;
 
     int *array = nullptr;
@@ -59,4 +57,3 @@ int main() {
 }
 
 
-#pragma clang diagnostic pop
