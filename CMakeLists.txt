@@ -127,3 +127,4 @@ add_executable(E018_GenerateN src/stl/algorithm/Modifying/E018_GenerateN/main.cp
 add_executable(E019_Remove src/stl/algorithm/Modifying/E019_Remove/main.cpp)
 add_executable(E020_RemoveIf src/stl/algorithm/Modifying/E020_RemoveIf/main.cpp)
 add_executable(E021_RemoveCopy src/stl/algorithm/Modifying/E021_RemoveCopy/main.cpp)
+add_executable(E022_RemoveCopyIf src/stl/algorithm/Modifying/E022_RemoveCopyIf/main.cpp)
