@@ -113,3 +113,4 @@ add_executable(E004_CopyBackWard src/stl/algorithm/Modifying/E004_CopyBackward/m
 add_executable(E005_Move src/stl/algorithm/Modifying/E005_Move/main.cpp)
 add_executable(E006_MoveBackward src/stl/algorithm/Modifying/E006_MoveBackward/main.cpp)
 add_executable(E007_Swap src/stl/algorithm/Modifying/E007_Swap/main.cpp)
+add_executable(E008_SwapRanges src/stl/algorithm/Modifying/E008_SwapRanges/main.cpp)
