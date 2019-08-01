@@ -1,5 +1,5 @@
 /**
- * copy_if() example
+ * copy_backward() example
  * g++ main.cpp -std=c++17 -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main
  * valgrind --leak-check=yes -v ./main
  */
