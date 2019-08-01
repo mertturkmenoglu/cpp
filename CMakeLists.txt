@@ -133,3 +133,4 @@ add_executable(E024_UniqueCopy src/stl/algorithm/Modifying/E024_UniqueCopy/main.
 add_executable(E025_Reverse src/stl/algorithm/Modifying/E025_Reverse/main.cpp)
 add_executable(E026_ReverseCopy src/stl/algorithm/Modifying/E026_ReverseCopy/main.cpp)
 add_executable(E027_Rotate src/stl/algorithm/Modifying/E027_Rotate/main.cpp)
+add_executable(E028_RotateCopy src/stl/algorithm/Modifying/E028_RotateCopy/main.cpp)
