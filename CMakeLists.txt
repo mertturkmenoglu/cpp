@@ -131,3 +131,4 @@ add_executable(E022_RemoveCopyIf src/stl/algorithm/Modifying/E022_RemoveCopyIf/m
 add_executable(E023_Unique src/stl/algorithm/Modifying/E023_Unique/main.cpp)
 add_executable(E024_UniqueCopy src/stl/algorithm/Modifying/E024_UniqueCopy/main.cpp)
 add_executable(E025_Reverse src/stl/algorithm/Modifying/E025_Reverse/main.cpp)
+add_executable(E026_ReverseCopy src/stl/algorithm/Modifying/E026_ReverseCopy/main.cpp)
