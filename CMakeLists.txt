@@ -117,3 +117,4 @@ add_executable(E008_SwapRanges src/stl/algorithm/Modifying/E008_SwapRanges/main.
 add_executable(E009_IterSwap src/stl/algorithm/Modifying/E009_IterSwap/main.cpp)
 add_executable(E010_Transform src/stl/algorithm/Modifying/E010_Transform/main.cpp)
 add_executable(E011_Replace src/stl/algorithm/Modifying/E011_Replace/main.cpp)
+add_executable(E012_ReplaceIf src/stl/algorithm/Modifying/E012_ReplaceIf/main.cpp)
