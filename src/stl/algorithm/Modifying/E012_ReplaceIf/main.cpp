@@ -18,4 +18,6 @@ int main() {
 
     std::copy(vector.begin(), vector.end(), std::ostream_iterator<int>(std::cout, " "));
     std::cout << std::endl;
+
+    return 0;
 }
