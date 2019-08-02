@@ -143,3 +143,4 @@ add_executable(E001_IsPartitioned src/stl/algorithm/Partition/E001_IsPartitioned
 add_executable(E002_Partition src/stl/algorithm/Partition/E002_Partition/main.cpp)
 add_executable(E003_StablePartition src/stl/algorithm/Partition/E003_StablePartition/main.cpp)
 add_executable(E004_PartitionCopy src/stl/algorithm/Partition/E004_PartitionCopy/main.cpp)
+add_executable(E005_PartitionPoint src/stl/algorithm/Partition/E005_PartitionPoint/main.cpp)
