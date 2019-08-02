@@ -153,3 +153,4 @@ add_executable(E002_StableSort src/stl/algorithm/Sorting/E002_StableSort/main.cp
 add_executable(E003_PartialSort src/stl/algorithm/Sorting/E003_PartialSort/main.cpp)
 add_executable(E004_PartialSortCopy src/stl/algorithm/Sorting/E004_PartialSortCopy/main.cpp)
 add_executable(E006_IsSortedUntil src/stl/algorithm/Sorting/E006_IsSortedUntil/main.cpp)
+add_executable(E007_NthElement src/stl/algorithm/Sorting/E007_NthElement/main.cpp)
