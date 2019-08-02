@@ -141,3 +141,4 @@ add_executable(E029_Shuffle src/stl/algorithm/Modifying/E029_Shuffle/main.cpp)
 ### Partition Algorithm Examples ###
 add_executable(E001_IsPartitioned src/stl/algorithm/Partition/E001_IsPartitioned/main.cpp)
 add_executable(E002_Partition src/stl/algorithm/Partition/E002_Partition/main.cpp)
+add_executable(E003_StablePartition src/stl/algorithm/Partition/E003_StablePartition/main.cpp)
