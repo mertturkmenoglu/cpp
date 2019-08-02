@@ -30,7 +30,7 @@ int main() {
 
     std::stable_partition(v_copy.begin(), v_copy.end(), [](int n) { return n > 5; });
     std::cout << "Using std::stable_partition(): ";
-    std::copy(vector.begin(), vector.end(), std::ostream_iterator<int>(std::cout, " "));
+    std::copy(v_copy.begin(), v_copy.end(), std::ostream_iterator<int>(std::cout, " "));
     std::cout << std::endl;
 
     return 0;
