@@ -56,6 +56,7 @@ add_executable(E002_String_2 src/examples/other/E002_String/stringSort.cpp)
 add_executable(E003_Vector src/examples/other/E003_Vector/main.cpp)
 add_executable(E004_String src/examples/other/E004_String/main.cpp)
 add_executable(E005_Const src/examples/other/E005_Const/main.cpp)
+add_executable(E006_DynamicCast src/examples/other/E006_DynamicCast/main.cpp)
 
 
 
