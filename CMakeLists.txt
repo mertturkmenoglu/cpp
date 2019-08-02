@@ -135,3 +135,8 @@ add_executable(E026_ReverseCopy src/stl/algorithm/Modifying/E026_ReverseCopy/mai
 add_executable(E027_Rotate src/stl/algorithm/Modifying/E027_Rotate/main.cpp)
 add_executable(E028_RotateCopy src/stl/algorithm/Modifying/E028_RotateCopy/main.cpp)
 add_executable(E029_Shuffle src/stl/algorithm/Modifying/E029_Shuffle/main.cpp)
+
+
+
+### Partition Algorithm Examples ###
+add_executable(E001_IsPartitioned src/stl/algorithm/Partition/E001_IsPartitioned/main.cpp)
