@@ -150,3 +150,4 @@ add_executable(E005_PartitionPoint src/stl/algorithm/Partition/E005_PartitionPoi
 ### Sorting Algorithm Examples ###
 add_executable(E001_Sort src/stl/algorithm/Sorting/E001_Sort/main.cpp)
 add_executable(E002_StableSort src/stl/algorithm/Sorting/E002_StableSort/main.cpp)
+add_executable(E003_PartialSort src/stl/algorithm/Sorting/E003_PartialSort/main.cpp)
