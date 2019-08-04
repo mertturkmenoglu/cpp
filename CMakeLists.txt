@@ -162,3 +162,4 @@ add_executable(E007_NthElement src/stl/algorithm/Sorting/E007_NthElement/main.cp
 add_executable(E001_LowerBound src/stl/algorithm/BinarySearch/E001_LowerBound/main.cpp)
 add_executable(E002_UpperBound src/stl/algorithm/BinarySearch/E002_UpperBound/main.cpp)
 add_executable(E003_EqualRange src/stl/algorithm/BinarySearch/E003_EqualRange/main.cpp)
+add_executable(E004_BinarySearch src/stl/algorithm/BinarySearch/E004_BinarySearch/main.cpp)
