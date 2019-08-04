@@ -172,3 +172,4 @@ add_executable(E002_InplaceMerge src/stl/algorithm/Merge/E002_InplaceMerge/main.
 add_executable(E003_Includes src/stl/algorithm/Merge/E003_Includes/main.cpp)
 add_executable(E004_SetUnion src/stl/algorithm/Merge/E004_SetUnion/main.cpp)
 add_executable(E005_SetIntersection src/stl/algorithm/Merge/E005_SetIntersection/main.cpp)
+add_executable(E006_SetDifference src/stl/algorithm/Merge/E006_SetDifference/main.cpp)
