@@ -168,3 +168,4 @@ add_executable(E004_BinarySearch src/stl/algorithm/BinarySearch/E004_BinarySearc
 
 ### Merge Algorithm Examples ###
 add_executable(E001_Merge src/stl/algorithm/Merge/E001_Merge/main.cpp)
+add_executable(E002_InplaceMerge src/stl/algorithm/Merge/E002_InplaceMerge/main.cpp)
