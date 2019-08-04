@@ -163,3 +163,8 @@ add_executable(E001_LowerBound src/stl/algorithm/BinarySearch/E001_LowerBound/ma
 add_executable(E002_UpperBound src/stl/algorithm/BinarySearch/E002_UpperBound/main.cpp)
 add_executable(E003_EqualRange src/stl/algorithm/BinarySearch/E003_EqualRange/main.cpp)
 add_executable(E004_BinarySearch src/stl/algorithm/BinarySearch/E004_BinarySearch/main.cpp)
+
+
+
+### Merge Algorithm Examples ###
+add_executable(E001_Merge src/stl/algorithm/Merge/E001_Merge/main.cpp)
