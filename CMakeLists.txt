@@ -170,3 +170,4 @@ add_executable(E004_BinarySearch src/stl/algorithm/BinarySearch/E004_BinarySearc
 add_executable(E001_Merge src/stl/algorithm/Merge/E001_Merge/main.cpp)
 add_executable(E002_InplaceMerge src/stl/algorithm/Merge/E002_InplaceMerge/main.cpp)
 add_executable(E003_Includes src/stl/algorithm/Merge/E003_Includes/main.cpp)
+add_executable(E004_SetUnion src/stl/algorithm/Merge/E004_SetUnion/main.cpp)
