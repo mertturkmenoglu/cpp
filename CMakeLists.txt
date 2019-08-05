@@ -103,6 +103,7 @@ add_executable(E014_Equal src/stl/algorithm/NonModifying/E014_Equal/main.cpp)
 add_executable(E015_IsPermutation src/stl/algorithm/NonModifying/E015_IsPermutation/main.cpp)
 add_executable(E016_Search src/stl/algorithm/NonModifying/E016_Search/main.cpp)
 add_executable(E017_SearchN src/stl/algorithm/NonModifying/E017_SearchN/main.cpp)
+add_executable(E018_LexicographicalCompare src/stl/algorithm/NonModifying/E018_LexicographicalCompare/main.cpp)
 
 
 
