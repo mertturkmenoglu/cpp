@@ -181,3 +181,4 @@ add_executable(E007_SetSymmetricDifference src/stl/algorithm/Merge/E007_SetSymme
 add_executable(E001_MakeHeap src/stl/algorithm/Heap/E001_MakeHeap/main.cpp)
 add_executable(E002_PushHeap src/stl/algorithm/Heap/E002_PushHeap/main.cpp)
 add_executable(E003_PopHeap src/stl/algorithm/Heap/E003_PopHeap/main.cpp)
+add_executable(E004_SortHeap src/stl/algorithm/Heap/E004_SortHeap/main.cpp)
