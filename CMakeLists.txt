@@ -190,3 +190,4 @@ add_executable(E006_IsHeapUntil src/stl/algorithm/Heap/E006_IsHeapUntil/main.cpp
 ### MinMax Algorithm Examples ###
 add_executable(E001_Max src/stl/algorithm/MinMax/E001_Max/main.cpp)
 add_executable(E002_MaxElement src/stl/algorithm/MinMax/E002_MaxElement/main.cpp)
+add_executable(E003_Min src/stl/algorithm/MinMax/E003_Min/main.cpp)
