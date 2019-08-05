@@ -202,3 +202,9 @@ add_executable(E006_MinmaxElement src/stl/algorithm/MinMax/E006_MinmaxElement/ma
 add_executable(E001_IsPermutation src/stl/algorithm/Permutations/E001_IsPermutation/main.cpp)
 add_executable(E002_NextPermutation src/stl/algorithm/Permutations/E002_NextPermutation/main.cpp)
 add_executable(E003_PrevPermutation src/stl/algorithm/Permutations/E003_PrevPermutation/main.cpp)
+
+
+
+### Containers Examples ###
+### Array Examples ###
+add_executable(E001_Array src/stl/containers/sequence/array/E001_Array/main.cpp)
