@@ -201,3 +201,4 @@ add_executable(E006_MinmaxElement src/stl/algorithm/MinMax/E006_MinmaxElement/ma
 ### Permutatiıns Algorithm Examples ###
 add_executable(E001_IsPermutation src/stl/algorithm/Permutations/E001_IsPermutation/main.cpp)
 add_executable(E002_NextPermutation src/stl/algorithm/Permutations/E002_NextPermutation/main.cpp)
+add_executable(E003_PrevPermutation src/stl/algorithm/Permutations/E003_PrevPermutation/main.cpp)
