@@ -184,3 +184,8 @@ add_executable(E003_PopHeap src/stl/algorithm/Heap/E003_PopHeap/main.cpp)
 add_executable(E004_SortHeap src/stl/algorithm/Heap/E004_SortHeap/main.cpp)
 add_executable(E005_IsHeap src/stl/algorithm/Heap/E005_IsHeap/main.cpp)
 add_executable(E006_IsHeapUntil src/stl/algorithm/Heap/E006_IsHeapUntil/main.cpp)
+
+
+
+### MinMax Algorithm Examples ###
+add_executable(E001_Max src/stl/algorithm/MinMax/E001_Max/main.cpp)
