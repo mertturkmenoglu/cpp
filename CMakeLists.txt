@@ -209,3 +209,4 @@ add_executable(E003_PrevPermutation src/stl/algorithm/Permutations/E003_PrevPerm
 ### Array Examples ###
 add_executable(E001_Array src/stl/containers/sequence/array/E001_Array/main.cpp)
 add_executable(E002_Array src/stl/containers/sequence/array/E002_Array/main.cpp)
+add_executable(E003_Array src/stl/containers/sequence/array/E003_Array/main.cpp)
