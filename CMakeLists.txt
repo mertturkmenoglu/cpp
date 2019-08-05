@@ -193,3 +193,4 @@ add_executable(E002_MaxElement src/stl/algorithm/MinMax/E002_MaxElement/main.cpp
 add_executable(E003_Min src/stl/algorithm/MinMax/E003_Min/main.cpp)
 add_executable(E004_MinElement src/stl/algorithm/MinMax/E004_MinElement/main.cpp)
 add_executable(E005_Minmax src/stl/algorithm/MinMax/E005_Minmax/main.cpp)
+add_executable(E006_MinmaxElement src/stl/algorithm/MinMax/E006_MinmaxElement/main.cpp)
