@@ -174,3 +174,8 @@ add_executable(E004_SetUnion src/stl/algorithm/Merge/E004_SetUnion/main.cpp)
 add_executable(E005_SetIntersection src/stl/algorithm/Merge/E005_SetIntersection/main.cpp)
 add_executable(E006_SetDifference src/stl/algorithm/Merge/E006_SetDifference/main.cpp)
 add_executable(E007_SetSymmetricDifference src/stl/algorithm/Merge/E007_SetSymmetricDifference/main.cpp)
+
+
+
+### Heap Algorithm Examples ###
+add_executable(E001_MakeHeap src/stl/algorithm/Heap/E001_MakeHeap/main.cpp)
