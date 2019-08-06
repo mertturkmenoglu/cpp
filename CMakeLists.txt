@@ -215,3 +215,4 @@ add_executable(E003_Array src/stl/containers/sequence/array/E003_Array/main.cpp)
 
 ### Vector Examples ###
 add_executable(E001_Vector src/stl/containers/sequence/vector/E001_Vector/main.cpp)
+add_executable(E002_Vector src/stl/containers/sequence/vector/E002_Vector/main.cpp)
