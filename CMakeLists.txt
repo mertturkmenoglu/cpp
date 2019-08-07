@@ -11,6 +11,7 @@ add_executable(E003_LambdaFunctions src/examples/advanced/E003_LambdaFunctions/m
 add_executable(E004_Threads src/examples/advanced/E004_Threads/main.cpp)
 add_executable(E005_Time src/examples/advanced/E005_Time/main.cpp)
 add_executable(E006_Sorting src/examples/advanced/E006_Sorting/main.cpp)
+add_executable(E007_Benchmarking src/examples/advanced/E007_Benchmarking/main.cpp)
 
 
 
