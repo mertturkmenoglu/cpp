@@ -219,3 +219,8 @@ add_executable(E001_Vector src/stl/containers/sequence/vector/E001_Vector/main.c
 add_executable(E002_Vector src/stl/containers/sequence/vector/E002_Vector/main.cpp)
 add_executable(E003_Vector src/stl/containers/sequence/vector/E003_Vector/main.cpp)
 add_executable(E004_Vector src/stl/containers/sequence/vector/E004_Vector/main.cpp)
+
+
+
+### Deque Examples ###
+add_executable(E001_Deque src/stl/containers/sequence/deque/E001_Deque/main.cpp)
