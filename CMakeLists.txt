@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 project(cpp)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 ### Language Examples ###
 ### Advanced Examples ###
@@ -58,6 +58,7 @@ add_executable(E003_VectorContainer src/examples/other/E003_VectorContainer/main
 add_executable(E004_String src/examples/other/E004_String/main.cpp)
 add_executable(E005_Const src/examples/other/E005_Const/main.cpp)
 add_executable(E006_DynamicCast src/examples/other/E006_DynamicCast/main.cpp)
+add_executable(E007_Optional src/examples/other/E007_Optional/main.cpp)
 
 
 
