@@ -1,32 +1,44 @@
 /**
  * Exception handling example
- * 
- * g++ main.cpp -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main
- * valgrind --leak-check=yes -v ./main
+ *
+ * If you have a Java background, you may know that there are two kinds of exception: Checked and Unchecked
+ * If a code block throws a checked exception, you must always handle the exception: In other words, you must use that
+ * code inside a try - catch block.
+ *
+ * In C++, there is only unchecked exceptions. You can use try-catch blocks but you do not have to.
  */
 
-#include <iostream>
 #include <exception>
+#include <iostream>
 
-class SpecialException : public std::exception {
+// You may create your own exception class simply by taking inheritance from std::exception class
+class specialException : public std::exception {
 public:
-    const char *what() const noexcept override {
+    [[nodiscard]] const char *what() const noexcept override {
         return "Special Exception Occurred";
     }
 };
 
 // Return area of a square
+// Square are is defined for a non-negative side length.
+// If the given side length is negative, we can throw an exception.
+// It is one of the solutions. So let's use this in here.
 int area(int sideLength) {
     if (sideLength <= 0) {
-        throw "Side length must be positive";
+        throw std::exception();
     }
 
     return (sideLength * sideLength);
 }
 
+// Same function. Just one difference:
+// We threw std::runtime_error in other implementation
+// Here, we throw specialException
+// We will see the difference(and similarities) of these two
+// in main function.
 int specialArea(int sideLength) {
     if (sideLength <= 0) {
-        throw SpecialException();
+        throw specialException();
     }
 
     return (sideLength * sideLength);
@@ -42,8 +54,8 @@ int main () {
             a = area(side);
             std::cout << "Area of the square: " << a << std::endl;
         }
-    } catch (const char* e) {
-        std::cerr << e << std::endl;
+    } catch (const std::exception& e) {
+        std::cerr << e.what() << std::endl;
     } catch (...) {
         std::cout << "Default catch block" << std::endl;
     }
@@ -56,8 +68,8 @@ int main () {
             a = specialArea(side);
             std::cout << "Area of the square: " << a << std::endl;
         }
-    } catch (SpecialException& e) {
-        std::cout << e.what() << std::endl;
+    } catch (const specialException& e) {
+        std::cerr << e.what() << std::endl;
     } catch (...) {
         std::cout << "Default catch block" << std::endl;
     }
