@@ -12,6 +12,7 @@ add_executable(E004_Threads src/examples/advanced/E004_Threads/main.cpp)
 add_executable(E005_Time src/examples/advanced/E005_Time/main.cpp)
 add_executable(E006_Sorting src/examples/advanced/E006_Sorting/main.cpp)
 add_executable(E007_Benchmarking src/examples/advanced/E007_Benchmarking/main.cpp)
+add_executable(E008_Constexpr src/examples/advanced/E008_Constexpr/main.cpp)
 
 
 
@@ -84,6 +85,7 @@ add_executable(P008_StringTokenizing src/practice/P008_StringTokenizing/main.cpp
 add_executable(P009_ReverseWords src/practice/P009_ReverseWords/main.cpp)
 add_executable(P010_Practice src/practice/P010_Practice/main.cpp)
 add_executable(P011_Ackermann src/practice/P011_Ackermann/main.cpp)
+add_executable(P012_Atoms src/practice/P012_Atoms/main.cpp)
 
 
 
