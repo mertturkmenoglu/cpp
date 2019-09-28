@@ -85,8 +85,6 @@ add_executable(P008_StringTokenizing src/practice/P008_StringTokenizing/main.cpp
 add_executable(P009_ReverseWords src/practice/P009_ReverseWords/main.cpp)
 add_executable(P010_Practice src/practice/P010_Practice/main.cpp)
 add_executable(P011_Ackermann src/practice/P011_Ackermann/main.cpp)
-add_executable(P012_Atoms src/practice/P012_Atoms/main.cpp)
-
 
 
 ### STL Examples ###
@@ -230,6 +228,11 @@ add_executable(E004_Vector src/stl/containers/sequence/vector/E004_Vector/main.c
 add_executable(E001_Deque src/stl/containers/sequence/deque/E001_Deque/main.cpp)
 add_executable(E002_Deque src/stl/containers/sequence/deque/E002_Deque/main.cpp)
 add_executable(E003_Deque src/stl/containers/sequence/deque/E003_Deque/main.cpp)
+
+
+
+### Forward List Examples ###
+add_executable(E001_ForwardList src/stl/containers/sequence/forward_list/E001_ForwardList/main.cpp)
 
 
 
