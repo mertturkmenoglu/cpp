@@ -233,6 +233,7 @@ add_executable(E003_Deque src/stl/containers/sequence/deque/E003_Deque/main.cpp)
 
 ### Forward List Examples ###
 add_executable(E001_ForwardList src/stl/containers/sequence/forward_list/E001_ForwardList/main.cpp)
+add_executable(E002_ForwardList src/stl/containers/sequence/forward_list/E002_ForwardList/main.cpp)
 
 
 
