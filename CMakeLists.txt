@@ -48,6 +48,7 @@ add_executable(E022_OperatorOverloading src/examples/oop/E022_OperatorOverloadin
 add_executable(E023_OperatorOverloading src/examples/oop/E023_OperatorOverloading/main.cpp)
 add_executable(E024_OperatorOverloading src/examples/oop/E024_OperatorOverloading/main.cpp)
 add_executable(E025_Templates src/examples/oop/E025_Templates/main.cpp)
+add_executable(E026_MutableField src/examples/oop/E026_MutableField/main.cpp)
 
 
 
