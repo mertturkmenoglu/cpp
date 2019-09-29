@@ -50,6 +50,7 @@ add_executable(E024_OperatorOverloading src/examples/oop/E024_OperatorOverloadin
 add_executable(E025_Templates src/examples/oop/E025_Templates/main.cpp)
 add_executable(E026_MutableField src/examples/oop/E026_MutableField/main.cpp)
 add_executable(E027_MemberFunctionPointer src/examples/oop/E027_MemberFunctionPointer/main.cpp)
+add_executable(E028_TemplateDefaultType src/examples/oop/E028_TemplateDefaultType/main.cpp)
 
 
 
