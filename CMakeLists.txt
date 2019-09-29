@@ -62,6 +62,7 @@ add_executable(E004_String src/examples/other/E004_String/main.cpp)
 add_executable(E005_Const src/examples/other/E005_Const/main.cpp)
 add_executable(E006_DynamicCast src/examples/other/E006_DynamicCast/main.cpp)
 add_executable(E007_Optional src/examples/other/E007_Optional/main.cpp)
+add_executable(E008_ReturnTypeDeduction src/examples/other/E008_ReturnTypeDeduction/main.cpp)
 
 
 
