@@ -77,6 +77,7 @@ add_executable(E004_FunctionPointers src/examples/pointers/E004_FunctionPointers
 add_executable(E005_SmartPointers src/examples/pointers/E005_SmartPointers/main.cpp)
 add_executable(E006_UniquePointer src/examples/pointers/E006_UniquePointer/main.cpp)
 add_executable(E007_SmartPointers src/examples/pointers/E007_SmartPointers/main.cpp)
+add_executable(E008_SmartPointers src/examples/pointers/E008_SmartPointers/main.cpp)
 
 
 
