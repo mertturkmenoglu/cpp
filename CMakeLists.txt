@@ -13,6 +13,7 @@ add_executable(E005_Time src/examples/advanced/E005_Time/main.cpp)
 add_executable(E006_Sorting src/examples/advanced/E006_Sorting/main.cpp)
 add_executable(E007_Benchmarking src/examples/advanced/E007_Benchmarking/main.cpp)
 add_executable(E008_Constexpr src/examples/advanced/E008_Constexpr/main.cpp)
+add_executable(E009_RAII src/examples/advanced/E009_RAII/main.cpp)
 
 
 
