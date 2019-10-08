@@ -15,35 +15,41 @@
 class Person
 {
 public:
-    std::string mName;
-    int mAge;
+    std::string m_name;
+    int m_age;
 public:
     Person(std::string name)
-        : mName(std::move(name)), mAge(-1) { }
+            :m_name(std::move(name)), m_age(-1)
+    {
+    }
 
     Person(int age)
-        : mName(""), mAge(age) { }
+            :m_name(""), m_age(age)
+    {
+    }
 };
 
-void printPerson(const Person& p) {
-    std::cout << "Name: " << p.mName << " Age: " << p.mAge << std::endl;
+void print_person(const Person& p)
+{
+    std::cout << "Name: " << p.m_name << " Age: " << p.m_age << std::endl;
 }
 
-int main() {
+int main()
+{
     Person j("John");   // Calls first constructor
     Person e = std::string("Emily");    // Calls first constructor
     Person f = 20;  // Calls second constructor
 
-    printPerson(j);
-    printPerson(e);
-    printPerson(f);
+    print_person(j);
+    print_person(e);
+    print_person(f);
 
     // Compiler knows that printPerson function takes a constant Person reference
     // So it has to create a Person object from given int argument. It implicitly
     // calls the appropriate constructor to create the object
     // In second example, same. But here we have a std::string argument
-    printPerson(12);
-    printPerson(std::string("Raskolnikov"));
+    print_person(12);
+    print_person(std::string("Raskolnikov"));
 
     return 0;
 }

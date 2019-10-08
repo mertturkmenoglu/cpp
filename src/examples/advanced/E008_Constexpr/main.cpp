@@ -14,8 +14,9 @@
  * @param n n-th number
  * @return  fibonacci number
  */
-constexpr long int fib(int n) {
-    return (n <= 1) ? n : fib(n-1) + fib(n-2);
+constexpr long int fib(int n)
+{
+    return (n <= 1) ? n : fib(n - 1) + fib(n - 2);
 }
 
 /*
@@ -24,8 +25,8 @@ constexpr long int fib(int n) {
  *    return (n <= 1) ? n : fib(n-1) + fib(n-2);
  * }
  */
-
-int main() {
+int main()
+{
     const long f = fib(30);
     std::cout << f << std::endl;
     return 0;

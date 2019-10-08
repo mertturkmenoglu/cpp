@@ -1,7 +1,5 @@
 /**
  * Time utils example
- * "g++ main.cpp -std=c++17 -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main"
- * valgrind --leak-check=yes -v ./main
  */
 
 #include <iostream>
@@ -11,13 +9,15 @@
 struct Timer
 {
     std::chrono::time_point<std::chrono::high_resolution_clock> begin, end;
-    std::chrono::duration<float> duration{};
+    std::chrono::duration<float> duration { };
 
-    Timer() {
+    Timer()
+    {
         begin = std::chrono::high_resolution_clock::now();
     }
 
-    ~Timer() {
+    ~Timer()
+    {
         end = std::chrono::high_resolution_clock::now();
         duration = end - begin;
 
@@ -25,16 +25,18 @@ struct Timer
     }
 };
 
-void printMessage(const std::string& message, int times)
+void print_message(const std::string& message, int times)
 {
     Timer t;
 
-    for (int i = 0; i < times; i++) {
-        std::cout << message  << " " << i << "\n";
+    for (int i = 0; i < times; i++)
+    {
+        std::cout << message << " " << i << "\n";
     }
 }
 
-int main() {
+int main()
+{
     using namespace std::literals::chrono_literals;
 
     auto time_start = std::chrono::high_resolution_clock::now();
@@ -52,7 +54,7 @@ int main() {
     std::cout << "Enter repetition count: " << std::endl;
     std::cin >> times;
 
-    printMessage(message, times);
+    print_message(message, times);
 
     return 0;
 }

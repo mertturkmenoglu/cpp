@@ -8,47 +8,59 @@
 #include <iostream>
 #include <memory>
 
-class benchmark {
+class Benchmark
+{
 private:
-    std::chrono::time_point<std::chrono::high_resolution_clock> mStartTimePoint;
+    std::chrono::time_point<std::chrono::high_resolution_clock> m_start_time_point;
 public:
-    benchmark() {
-        mStartTimePoint = std::chrono::high_resolution_clock::now();
+    Benchmark()
+    {
+        m_start_time_point = std::chrono::high_resolution_clock::now();
     }
 
-    ~benchmark() {
+    ~Benchmark()
+    {
         stop();
     }
 
-    void stop() {
-        std::chrono::time_point<std::chrono::high_resolution_clock> endTimePoint = std::chrono::high_resolution_clock::now();
-        auto begin = std::chrono::time_point_cast<std::chrono::microseconds>(mStartTimePoint).time_since_epoch().count();
-        auto end = std::chrono::time_point_cast<std::chrono::microseconds>(endTimePoint).time_since_epoch().count();
+    void stop()
+    {
+        std::chrono::time_point<std::chrono::high_resolution_clock> end_time_point = std::chrono::high_resolution_clock::now();
+        auto begin = std::chrono::time_point_cast<std::chrono::microseconds>(m_start_time_point).time_since_epoch()
+                .count();
+        auto end = std::chrono::time_point_cast<std::chrono::microseconds>(end_time_point).time_since_epoch().count();
         std::cout << "Duration: " << end - begin << std::endl;
     }
 
 };
 
-class person {
+class Person
+{
 
 };
 
-int main() {
+int main()
+{
     {
-        benchmark b;
+        Benchmark b;
         long value = 0;
-        for (int i = 0; i < 1000000; i++) {
-            if (i % 2 == 0) {
+
+        for (int i = 0; i < 1000000; i++)
+        {
+            if (i % 2 == 0)
+            {
                 value += i;
             }
         }
     }
 
     {
-        std::array<std::shared_ptr<person>, 2000> ptrs;
-        benchmark b;
-        for (int i = 0; i < 2000; i++) {
-            ptrs[i] = std::make_shared<person>();
+        std::array<std::shared_ptr<Person>, 2000> pointers;
+        Benchmark b;
+
+        for (int i = 0; i < 2000; i++)
+        {
+            pointers[i] = std::make_shared<Person>();
         }
     }
 

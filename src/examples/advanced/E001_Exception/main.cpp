@@ -12,9 +12,11 @@
 #include <iostream>
 
 // You may create your own exception class simply by taking inheritance from std::exception class
-class specialException : public std::exception {
+class SpecialException: public std::exception
+{
 public:
-    [[nodiscard]] const char *what() const noexcept override {
+    [[nodiscard]] const char* what() const noexcept override
+    {
         return "Special Exception Occurred";
     }
 };
@@ -23,12 +25,14 @@ public:
 // Square are is defined for a non-negative side length.
 // If the given side length is negative, we can throw an exception.
 // It is one of the solutions. So let's use this in here.
-int area(int sideLength) {
-    if (sideLength <= 0) {
+int area(int side_length)
+{
+    if (side_length <= 0)
+    {
         throw std::exception();
     }
 
-    return (sideLength * sideLength);
+    return (side_length * side_length);
 }
 
 // Same function. Just one difference:
@@ -36,41 +40,56 @@ int area(int sideLength) {
 // Here, we throw specialException
 // We will see the difference(and similarities) of these two
 // in main function.
-int specialArea(int sideLength) {
-    if (sideLength <= 0) {
-        throw specialException();
+int special_area(int side_length)
+{
+    if (side_length <= 0)
+    {
+        throw SpecialException();
     }
 
-    return (sideLength * sideLength);
+    return (side_length * side_length);
 }
 
-int main () {
-    int sides[] = {5, 7, 2, 0, 4};
+int main()
+{
+    int sides[] = { 5, 7, 2, 0, 4 };
     int a;
 
     // Basic throw
-    try {
-        for (int side : sides) {
+    try
+    {
+        for (int side : sides)
+        {
             a = area(side);
             std::cout << "Area of the square: " << a << std::endl;
         }
-    } catch (const std::exception& e) {
+    }
+    catch (const std::exception& e)
+    {
         std::cerr << e.what() << std::endl;
-    } catch (...) {
+    }
+    catch (...)
+    {
         std::cout << "Default catch block" << std::endl;
     }
 
     std::cout << "After first try-catch block" << std::endl;
 
     // User defined exception throw
-    try {
-        for (int side : sides) {
-            a = specialArea(side);
+    try
+    {
+        for (int side : sides)
+        {
+            a = special_area(side);
             std::cout << "Area of the square: " << a << std::endl;
         }
-    } catch (const specialException& e) {
+    }
+    catch (const SpecialException& e)
+    {
         std::cerr << e.what() << std::endl;
-    } catch (...) {
+    }
+    catch (...)
+    {
         std::cout << "Default catch block" << std::endl;
     }
 

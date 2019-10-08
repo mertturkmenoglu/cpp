@@ -29,8 +29,10 @@ void bad_example()
     m.lock();
     calculate();                 // If calculate() throws an exception, the mutex is never released
 
-    if(!everything_ok())
+    if (!everything_ok())
+    {
         return;                  // Early return, the mutex is never released
+    }
 
     m.unlock();                  // The mutex is released
 }
@@ -40,8 +42,10 @@ void good_example()
     std::lock_guard<std::mutex> guard(m);   // Mutex acquisition is initialization
     calculate();                               // If calculate() throws an exception, the mutex is released
 
-    if(!everything_ok())
+    if (!everything_ok())
+    {
         return;                                // Early return, the mutex is released
+    }
 
     // If code flow hits this point, guard object will go out of scope, so it's deconstructor will be called and it
     // will free the wrapped resource.
@@ -51,7 +55,8 @@ void good_example()
     // wrapped resource.
 }
 
-int main() {
+int main()
+{
     bad_example();
     good_example();
 
