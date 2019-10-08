@@ -1,67 +1,68 @@
 /**
  * Function pointers example
- * g++ main.cpp -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main
- * valgrind --leak-check=yes -v ./main
  */
 
 #include <iostream>
 #include <vector>
 
-void printHello()
+void print_hello()
 {
     std::cout << "Hello" << std::endl;
 }
 
-void printMessage(const char* message)
+void print_message(const char* message)
 {
     std::cout << message << std::endl;
 }
 
-int addInts(int a, int b)
+int add_ints(int a, int b)
 {
     return (a + b);
 }
 
-void printNumber(float num)
+void print_number(float num)
 {
     std::cout << num << std::endl;
 }
 
-void printSquare(float num)
+void print_square(float num)
 {
     std::cout << (num * num) << std::endl;
 }
 
-void applyFunction(const std::vector<float>& nums, void (*func)(float))
+void apply_function(const std::vector<float>& nums, void (* func)(float))
 {
-    for (float number : nums) {
+    for (float number : nums)
+    {
         func(number);
     }
 }
 
-int main() {
+int main()
+{
     // Declaring with type
-    void (*print)() = printHello;
+    void (* print)() = print_hello;
     print();
 
     // With auto keyword
-    auto messagePrint = printMessage;
-    messagePrint("Hello World");
+    auto message_print = print_message;
+    message_print("Hello World");
 
     // Function with a return type
-    int (*addition)(int, int) = &addInts;
+    int (* addition)(int, int) = &add_ints;
     int result = addition(3, 4);
     std::cout << result << std::endl;
 
     std::cout << "------------" << std::endl;
 
-    std::vector<float> nums = {3.14, 2.71, 42, 1.61, 1.41};
+    std::vector<float> nums = { 3.14, 2.71, 42, 1.61, 1.41 };
     // Function takes another function as argument
-    applyFunction(nums, printNumber);
-    applyFunction(nums, printSquare);
+    apply_function(nums, print_number);
+    apply_function(nums, print_square);
 
     // Lambda function
-    applyFunction(nums, [](float number) {
+    apply_function(nums, [](float number)
+    {
         std::cout << number + 1 << std::endl;
     });
 

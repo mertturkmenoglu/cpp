@@ -1,7 +1,7 @@
 #include <memory>
 #include <iostream>
 
-void printArray(int arr[], int n)
+void print_array(int arr[], int n)
 {
     for (int i = 0; i < n; i++)
     {
@@ -23,7 +23,7 @@ int main()
         arr[i] = i;
     }
 
-    printArray(arr.get(), n);
+    print_array(arr.get(), n);
 
     return 0;
 }

@@ -2,46 +2,46 @@
 #include <memory>
 #include <utility>
 
-class tool
+class Tool
 {
 private:
-    std::string mName;
+    std::string m_name;
 public:
-    explicit tool(std::string name) : mName(std::move(name))
+    explicit Tool(std::string name)
+            :m_name(std::move(name))
     {
-        std::cout << "Tool created: " << mName << std::endl;
+        std::cout << "Tool created: " << m_name << std::endl;
     }
 
-    void printInfo()
+    void print_info()
     {
-        std::cout << "Inside tool::printInfo: " << mName << std::endl;
+        std::cout << "Inside tool::printInfo: " << m_name << std::endl;
     }
 
-    ~tool()
+    ~Tool()
     {
-        std::cout << "Tool destroyed: " << mName << std::endl;
+        std::cout << "Tool destroyed: " << m_name << std::endl;
     }
 };
 
 int main()
 {
-    std::unique_ptr<tool> t;
+    std::unique_ptr<Tool> t;
 
     std::cout << "main function started" << std::endl;
     std::cout << "Before scope" << std::endl;
 
-
     {
         std::cout << "Scope started" << std::endl;
 
-        t = std::make_unique<tool>("Scope tool");
+        t = std::make_unique<Tool>("Scope tool");
 
         std::cout << "Scope ended" << std::endl;
     }
 
     std::cout << "After scope" << std::endl;
 
-    t->printInfo();
+    t->print_info();
 
     std::cout << "main function ended" << std::endl;
 

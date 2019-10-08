@@ -20,7 +20,7 @@ public:
     ~Person() { std::cout << "Person deleted" << std::endl; }
 
     inline const std::string& GetName() const { return name; }
-    inline void SetName(const std::string& _name) { this->name = _name; }
+    inline void set_name(const std::string& _name) { this->name = _name; }
 };
 
 int main() {
@@ -38,7 +38,7 @@ int main() {
     {
         std::unique_ptr<Person> p_person = std::make_unique<Person>("Emily");
         std::cout << p_person->GetName() << std::endl;
-        p_person->SetName(std::string("Cemre"));
+        p_person->set_name(std::string("Cemre"));
         std::cout << p_person->GetName() << std::endl;
     }
     std::cout << "After block" << std::endl;

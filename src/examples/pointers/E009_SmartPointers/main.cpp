@@ -1,44 +1,48 @@
 #include <iostream>
 #include <memory>
 
-
-class tool
+class Tool
 {
 private:
-    std::string mName;
+    std::string m_name;
 public:
-    explicit tool(std::string name) : mName(std::move(name))
+    explicit Tool(std::string name)
+            :m_name(std::move(name))
     {
-        std::cout << "Tool created: " << mName << std::endl;
+        std::cout << "Tool created: " << m_name << std::endl;
     }
 
-    void printInfo()
+    void print_info()
     {
-        std::cout << "Inside tool::printInfo: " << mName << std::endl;
+        std::cout << "Inside Tool::printInfo: " << m_name << std::endl;
     }
 
-    ~tool()
+    ~Tool()
     {
-        std::cout << "Tool destroyed: " << mName << std::endl;
+        std::cout << "Tool destroyed: " << m_name << std::endl;
     }
 };
 
-// It won't leaks
-std::shared_ptr<tool> createSharedTool()
+// It won't leak
+std::shared_ptr<Tool> create_shared_tool()
 {
-    return std::make_shared<tool>("tool_obj");
+    return std::make_shared<Tool>("tool_obj_shared");
 }
 
 // This one will leak if you don't free the memory
-tool* createRawTool()
+Tool* create_raw_tool()
 {
-    return new tool("tool_obj");
+    return new Tool("tool_obj_raw");
 }
 
 int main()
 {
-    auto t = createSharedTool();
-    t->printInfo();
+    auto t = create_shared_tool();
+    t->print_info();
+
+    auto raw_tool = create_raw_tool();
+    raw_tool->print_info();
+    delete raw_tool;
 
     return 0;
 }

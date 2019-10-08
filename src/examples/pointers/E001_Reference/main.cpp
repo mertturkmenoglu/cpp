@@ -1,43 +1,41 @@
 /**
  * Reference example
- * 
- * g++ main.cpp -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main
  */
 
 #include <iostream>
 
-void swap(int& num1, int& num2);
+void swap(int& first, int& second);
 
 int main()
 {
-  int var = 10;
-  int& ref = var;
-  
-  while (var < 100) {
-    std::cout << "Variable: " << var << std::endl;
-    std::cout << "Reference: " << ref << std::endl;
-    std::cout << "******" << std::endl;
-    ref += 10;
-  }
+    int var = 10;
+    int& ref = var;
 
-  int num1 = 10;
-  int num2 = 20;
-  int& ref1 = num1;
-  int& ref2 = num2;
+    while (var < 100)
+    {
+        std::cout << "Variable: " << var << std::endl;
+        std::cout << "Reference: " << ref << std::endl;
+        std::cout << "******" << std::endl;
+        ref += 10;
+    }
 
-  std::cout << "Number1: " << num1 << "\tNumber2: " << num2 << std::endl;
+    int num_1 = 10;
+    int num_2 = 20;
+    int& ref_1 = num_1;
+    int& ref_2 = num_2;
 
-  swap(num1, num2);
+    std::cout << "Number1: " << num_1 << "\tNumber2: " << num_2 << std::endl;
 
-  std::cout << "Number1: " << num1 << "\tNumber2: " << num2 << std::endl;
+    swap(num_1, num_2);
 
-  return 0;
+    std::cout << "Number1: " << num_1 << "\tNumber2: " << num_2 << std::endl;
+
+    return 0;
 }
 
-
-void swap(int& num1, int& num2)
+void swap(int& first, int& second)
 {
-  int temp = num1;
-  num1 = num2;
-  num2 = temp;
+    int temp = first;
+    first = second;
+    second = temp;
 }

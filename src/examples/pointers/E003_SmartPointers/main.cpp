@@ -1,30 +1,31 @@
 /**
  * Smart pointer example
- * g++ main.cpp -std=c++14 -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main
- * valgrind --leak-check=yes -v ./main
  */
 
 #include <iostream>
 #include <memory>
 
-class Person {
+class Person
+{
 public:
-    Person() {
+    Person()
+    {
         std::cout << "A person object created" << std::endl;
     }
 
-    ~Person() {
+    ~Person()
+    {
         std::cout << "A person object deleted" << std::endl;
     }
 
-    static void print() {
+    static void print()
+    {
         std::cout << "I am at Person.print() method" << std::endl;
     }
 };
 
-
-
-int main() {
+int main()
+{
     std::cout << __LINE__ << std::endl;
     // Scope starts
     {
@@ -36,13 +37,12 @@ int main() {
     // Scope ends
     std::cout << __LINE__ << std::endl;
 
-
     std::cout << __LINE__ << std::endl;
     // Scope starts
     {
         // Or: std::unique_ptr<Person> u_ptr(new Person())
         std::unique_ptr<Person> u_ptr = std::make_unique<Person>();
-        
+
         // You can not assign it to another pointer
         // !!! std::unique_ptr<Person> s_ptr = u_ptr;
         // This won't work
@@ -50,7 +50,6 @@ int main() {
     }
     // Scope ends
     std::cout << __LINE__ << std::endl;
-
 
     std::cout << __LINE__ << std::endl;
     // Scope starts
@@ -73,7 +72,6 @@ int main() {
     // Scope ends
     // all references to object dies, object dies
     std::cout << __LINE__ << std::endl;
-
 
     std::cout << __LINE__ << std::endl;
     // Scope starts

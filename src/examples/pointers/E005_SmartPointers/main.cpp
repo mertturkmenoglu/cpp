@@ -1,51 +1,71 @@
-#include <utility>
-
 /**
  * Smart Pointer implementation
- * "g++ main.cpp -std=c++17 -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main"
- * valgrind --leak-check=yes -v ./main
  */
 
 #include <iostream>
+#include <utility>
 
 template <class T>
-class SpecialPointer {
+class SpecialPointer
+{
 private:
     T* ptr;
 public:
-    explicit SpecialPointer(T* p = nullptr) : ptr(p) {
+    explicit SpecialPointer(T* p = nullptr)
+            :ptr(p)
+    {
         std::cout << "Construct" << std::endl;
     }
 
-    ~SpecialPointer() {
+    ~SpecialPointer()
+    {
         std::cout << "Delete" << std::endl;
         delete ptr;
     }
 
-    inline T& operator*() { return *ptr; }
+    inline T& operator*()
+    {
+        return *ptr;
+    }
 
-    inline T* operator->() { return ptr; }
+    inline T* operator->()
+    {
+        return ptr;
+    }
 };
 
-class Person {
+class Person
+{
 private:
-    std::string name;
+    std::string m_name;
 public:
 
-    explicit Person(std::string  name) : name(std::move(name)) { }
+    explicit Person(std::string name)
+            :m_name(std::move(name))
+    {
 
-    inline const std::string& GetName() const { return name; }
-    inline void SetName(const std::string& _name) { this->name = _name; }
+    }
+
+    [[nodiscard]] inline const std::string& get_name() const
+    {
+        return m_name;
+    }
+
+    inline void set_name(const std::string& name)
+    {
+        this->m_name = name;
+    }
 };
 
-int main() {
+int main()
+{
     // Block
     {
         SpecialPointer<Person> p(new Person(std::string("Ali")));
-        std::cout << p->GetName() << std::endl;
+        std::cout << p->get_name() << std::endl;
     }
     // Destructor should be called
-    
+
     return 0;
 }
 
