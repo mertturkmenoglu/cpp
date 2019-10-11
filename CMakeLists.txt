@@ -99,6 +99,7 @@ add_executable(P011_Ackermann src/practice/P011_Ackermann/main.cpp)
 add_executable(P012_MexicanWave src/practice/P012_MexicanWave/main.cpp)
 add_executable(P013_NumberAddition src/practice/P013_NumberAddition/main.cpp)
 add_executable(P014_CaseDetection src/practice/P014_CaseDetection/main.cpp)
+add_executable(P015_BogoSort src/practice/P015_BogoSort/main.cpp)
 
 
 ### STL Examples ###
