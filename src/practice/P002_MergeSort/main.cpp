@@ -1,34 +1,33 @@
 /**
  * Practice 002: Merge Sort implementation
- * "g++ main.cpp -std=c++17 -Wall -Wextra -Wnon-virtual-dtor -pedantic -g -o main"
- * valgrind --leak-check=yes -v ./main
  */
 
-#include <iostream>
 #include <algorithm>
+#include <array>
+#include <iostream>
 #include <iterator>
-#include <iomanip>
+#include <memory>
 #include <random>
 
-template<class T>
-void mergeSort(T array[], int start, int end);
+template <typename T>
+void merge_sort(T array[], int start, int end);
 
-template<class T>
+template <typename T>
 void merge(T array[], int start, int mid, int end);
 
-
-template<class T>
-void mergeSort(T array[], int start, int end)
+template <typename T>
+void merge_sort(T array[], int start, int end)
 {
-    if (start < end) {
+    if (start < end)
+    {
         int mid = (start + end) / 2;
-        mergeSort(array, start, mid);
-        mergeSort(array, mid + 1, end);
+        merge_sort(array, start, mid);
+        merge_sort(array, mid + 1, end);
         merge(array, start, mid, end);
     }
 }
 
-template<class T>
+template <typename T>
 void merge(T array[], int start, int mid, int end)
 {
     // Size of merged array
@@ -36,8 +35,8 @@ void merge(T array[], int start, int mid, int end)
     n = end - start + 1;
 
     // Temporary array
-    T* tempArray = new T[n];
-    
+    std::unique_ptr<T[]> tmp_arr = std::make_unique<T[]>(n);
+
     // i is index of the first part
     int i = start;
 
@@ -53,63 +52,59 @@ void merge(T array[], int start, int mid, int end)
      * to merged array.
      */
     while ((i <= mid) && (j <= end))
-        tempArray[index++] = (array[i] < array[j]) ? array[i++] : array[j++];
+    {
+        tmp_arr[index++] = (array[i] < array[j]) ? array[i++] : array[j++];
+    }
 
     // Append elements from first part to merged array if there is any
     while (i <= mid)
-        tempArray[index++] = array[i++];
+    {
+        tmp_arr[index++] = array[i++];
+    }
 
     // Append elements from second part to merged array if there is any
     while (j <= end)
-        tempArray[index++] = array[j++];
+    {
+        tmp_arr[index++] = array[j++];
+    }
 
     // Clone elements from temporary array to the original one
     for (i = start; i <= end; i++)
-        array[i] = tempArray[i - start];
-    
-    delete[] tempArray;
+    {
+        array[i] = tmp_arr[i - start];
+    }
 }
 
-int main() {
+int main()
+{
     std::random_device rd;
     std::mt19937 mt(rd());
     std::uniform_int_distribution<int> random_int(0, RAND_MAX);
     std::uniform_real_distribution<double> random_double(0, RAND_MAX);
 
-    int arr_int[10];
-    float arr_float[10];
+    std::array<int, 10> arr_int { };
+    std::array<float, 10> arr_float { };
 
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 10; i++)
+    {
         arr_float[i] = static_cast<float>(random_double(mt) / static_cast<double>(RAND_MAX));
-
         arr_int[i] = random_int(mt) % 10;
     }
 
-    std::for_each(std::begin(arr_int), std::end(arr_int), [](int num){
-        std::cout << num << "\t";
-    });
-
+    std::copy(arr_int.begin(), arr_int.end(), std::ostream_iterator<int>(std::cout, ", "));
     std::cout << std::endl;
 
-    std::for_each(std::begin(arr_float), std::end(arr_float), [](float num){
-        std::cout << std::setprecision(2) << num << "\t";
-    });
-
-    mergeSort(arr_int, 0, 9);
-    mergeSort(arr_float, 0, 9);
-
+    std::copy(arr_float.begin(), arr_float.end(), std::ostream_iterator<float>(std::cout, ", "));
     std::cout << std::endl;
 
-    std::for_each(std::begin(arr_int), std::end(arr_int), [](int num){
-        std::cout << num << "\t";
-    });
+    merge_sort(arr_int.data(), 0, 9);
+    merge_sort(arr_float.data(), 0, 9);
 
+    std::copy(arr_int.begin(), arr_int.end(), std::ostream_iterator<int>(std::cout, ", "));
     std::cout << std::endl;
 
-    std::for_each(std::begin(arr_float), std::end(arr_float), [](float num){
-        std::cout << std::setprecision(2) << num << "\t";
-    });
-
+    std::copy(arr_float.begin(), arr_float.end(), std::ostream_iterator<float>(std::cout, ", "));
     std::cout << std::endl;
+
     return 0;
 }
