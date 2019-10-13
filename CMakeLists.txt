@@ -68,6 +68,7 @@ add_executable(E006_DynamicCast src/examples/other/E006_DynamicCast/main.cpp)
 add_executable(E007_Optional src/examples/other/E007_Optional/main.cpp)
 add_executable(E008_ReturnTypeDeduction src/examples/other/E008_ReturnTypeDeduction/main.cpp)
 add_executable(E009_Strtok src/examples/other/E009_Strtok/main.cpp)
+add_executable(E010_AutoFunction src/examples/other/E010_AutoFunction/main.cpp)
 
 
 
