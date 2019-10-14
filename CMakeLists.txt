@@ -85,6 +85,11 @@ add_executable(E009_SmartPointers src/examples/pointers/E009_SmartPointers/main.
 
 
 
+### Type Traits Examples ###
+add_executable(E001_IsUnsigned src/examples/TypeTraits/E001_IsUnsigned/main.cpp)
+
+
+
 ### Coding practices
 add_executable(P001_MinMax src/practice/P001_MinMax/main.cpp)
 add_executable(P002_MergeSort src/practice/P002_MergeSort/main.cpp)
