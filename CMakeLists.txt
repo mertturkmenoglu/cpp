@@ -16,6 +16,7 @@ add_executable(E008_Constexpr src/examples/advanced/E008_Constexpr/main.cpp)
 add_executable(E009_RAII src/examples/advanced/E009_RAII/main.cpp)
 add_executable(E010_Shuffle src/examples/advanced/E010_Shuffle/main.cpp)
 add_executable(E011_FunctionDelete src/examples/advanced/E011_FunctionDelete/main.cpp)
+add_executable(E012_Hash src/examples/advanced/E012_Hash/main.cpp)
 
 
 
