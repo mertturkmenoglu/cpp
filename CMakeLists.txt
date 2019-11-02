@@ -87,6 +87,11 @@ add_executable(E009_SmartPointers src/examples/pointers/E009_SmartPointers/main.
 
 
 
+### Template Programming Examples ###
+add_executable(E001_Templates src/examples/TemplateProgramming/E001_Templates/main.cpp)
+
+
+
 ### Type Traits Examples ###
 add_executable(E001_IsUnsigned src/examples/TypeTraits/E001_IsUnsigned/main.cpp)
 
